@@ -12,13 +12,22 @@ use Symfony\Component\HttpFoundation\Session\Session;
 
 class HomeController extends Controller
 {
-    public function login(Request $request){
-        $admin_name = $request->admin_name;
-        $admin_password = $request->admin_password;
-
-        $result = DB::table('user')->where('name',$admin_name)->where('password',$admin_password)->first();
-    }    
-
+    public function login(){
+        return view('login');
+    }       
+    public function login_check(Request $request){
+        $username = $request->username;
+        $password = $request->password;
+        $result = DB::table('user')->where('username',$username)->where('password',$password)->first();
+        if($result){
+            FacadesSession::put('message','Đăng nhập thành công');
+            session('username',$username);
+            return Redirect::to('');
+        }else{
+            return Redirect::to('login');
+        }
+    }
+    
     public function all_product(){
         $all_product = DB::table('product')->get();
         return view('category',['all_product' => $all_product]);

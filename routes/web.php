@@ -16,7 +16,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/','HomeController@getProduct');
 
-Route::get('/login','HomeController@getProduct');
+Route::get('/login','HomeController@login');
+Route::get('/login_check','HomeController@login_check');
 Route::get('/category','HomeController@all_product');
 
 Route::get('/add','HomeController@add_product');
