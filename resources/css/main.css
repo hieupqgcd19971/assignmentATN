@@ -1,0 +1,296 @@
+.page-wrapper{
+    background-color: #edefed;
+}
+.header-top-right-li{
+    padding: 5px 20px 0px 20px;
+    font-weight: 300;
+    color: white;
+}
+#header{
+    background-image: url(https://namphudecor.com/wp-content/gallery/masteri-duplex/PK-2.jpg);
+    height: 792px;
+}
+
+.site-header-container-row{
+    height: 70px;
+}
+.social-icon{
+    padding-right: 30px;
+}
+.social-icon-li i{
+    color: #fff;
+}
+.social-icon-li i:hover{
+    transform: rotateZ(30deg);
+    cursor: pointer;
+    color: #e0dada;
+}
+.header-top-right-li{
+    cursor: pointer;
+}
+#login{
+    color: #fff;
+}
+#login:hover{
+    color: #cecece;
+    text-decoration: none;
+}
+#myaccount{
+    color: #fff;
+}
+#myaccount:hover{
+    color: #cecece;
+    text-decoration: none;
+}
+.header-top-right-li span:hover{
+    color: #cecece;
+}
+.contact-infor{
+    color: #fff;
+}
+.header-container-left{
+    width: 25%;
+}
+.header-container-main{
+    width: 30%;
+}
+.header-container-right{
+    width: 35%;
+}
+.site-header-main{
+    height: 70px;
+}
+.header-bottom-wrapper{
+    padding-top: 30px;
+}
+#header-search-main{
+    width: 70%;
+    border: none;
+    background: none;
+    border-bottom: 2px solid #efefef;
+}
+.btn-search::before{
+    content: "\e003";
+}
+.header-container-contact-btn{
+    padding: 7px 20px 7px 20px;
+    border: 2px solid #fff;
+    color: white;
+    text-decoration: none;
+}
+.header-container-contact-btn:hover{
+    text-decoration: none;
+    color: rgb(219, 217, 217);
+}
+.fa-shopping-cart{
+    padding-left: 20px;
+    font-size: 27px;
+    color: white;
+}
+.main-menu-item{
+    padding-left: 40px;
+    color: white;
+    font-size: 19px;
+    font-weight: 300;
+    cursor: pointer;
+}
+.main-menu-img{
+    padding-left: 36px;
+}
+.main-menu-item:hover{
+    color: #e2f576;
+}
+.fa-search{
+    color: white;   
+}
+.section-first{
+    padding-top: 50px;
+}
+.col-section-first{
+    position: relative;
+}
+.image-boxes-first{
+   width: 100%;
+   height: 100%;
+}
+.image-boxes-link{
+    display: block;
+    position: relative;
+}
+.title-image-boxes{
+    position: absolute;
+    bottom: 0;
+    z-index: 0;
+    width: 100%;
+    line-height: 22px;
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 0;
+    padding-bottom: 30px;
+    text-align: center;
+}
+.title-image-boxes::before{
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    background: linear-gradient(to bottom,transparent 0%,rgba(0,0,0,1) 100%);
+    opacity: .8;
+}
+.title-image-boxes::after{
+    content: '';
+    position: relative;
+    height: 2px;
+    width: 30px;
+    z-index: 1;
+    display: block;
+    background-color: #fc3;
+    margin: 0 auto;
+    margin-top: 10px;
+    transition: all .2s ease-out;
+}
+.title-image-boxes span{
+    z-index: 1;
+    position: relative;
+}
+.title-image-boxes:hover::after{
+    width: 70px;
+}
+.section-second{
+    padding-top: 50px;
+}
+.section-second-img{
+    position: relative;
+}
+.image-boxes-second-inner img{
+    width: 100%;
+}
+.section-second-row{
+    background-color: white;
+}
+.content-boxes-second-wrapper{
+    padding: 0px 70px 20px 70px;
+    box-sizing: border-box;
+}
+.section-second-titlebox{
+    padding-top: 90px;
+}
+.section-second-titlebox h4{
+    font-size: 14px;
+    margin: 0 auto;
+    line-height: 24px;
+    font-weight: 400;
+    color: #333;
+}
+.section-second-titlebox h3{
+    font-size: 24px;
+    font-weight: 700;
+}
+.section-second-btn{
+    padding-top: 30px;
+}
+.section-second-btn a{
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 50px 10px 50px;
+    border-radius: 4px;
+    background-color: #38c9ae;
+}
+.section-second-btn a:hover{
+    text-decoration: none;
+    background-color: #43e6c2;
+}
+/* section-third */
+.section-third{
+    position: relative;
+    width: 100%;
+    height: 90px;
+    margin-top: 50px;
+    background-color: #fc3;
+}
+.section-third-row{
+    padding-top: 30px;
+}
+.title-boxes-third h3{
+    font-size: 30px;
+    font-weight: 800;
+    color: white;
+    text-align: center;
+}
+/* Section-fourth */
+.section-fourth{
+    padding-top: 50px;
+}
+.listwrapper-row{
+    padding: 0;
+    position: unset;
+}
+.spp-listwrapper{
+    width: 100%;
+}
+.products-list{
+    width: 100%;
+    padding: 0;
+}
+.products-item{
+    background-color: white;
+    width: 25%;
+    margin: 10px;
+}
+.products-item:hover{
+    box-shadow: 20px 20px 50px rgb(177, 174, 174);
+}
+.pt{
+    color: #333;
+    font-size: 23px;
+    font-weight: 600;
+}
+.products-item-decs{
+   padding: 20px 30px 20px 30px ;
+}
+.products-item-decs h3{
+    padding-bottom: 20px;
+}
+.products-price{
+    color: #333;
+    font-size: 18px;
+}
+.products-price span{
+    padding-left: 10px;
+}
+.icon-shopping{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.i4pro{
+    color: #b1aec4;
+    font-size: 14px;
+}
+.menu-item-type-social >a{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+}
+.producer-item{
+    position: absolute;
+    left: 39%;
+}
+.col-producer{
+    padding-top: 50px;
+}
+.menu-item-type-producer{
+    color: #797979;
+    padding-left: 2px;
+}
+/* footer */
+
+.column-fifth-content .fifth-content-list li:hover{
+    color: #999;
+    cursor: pointer;
+}
