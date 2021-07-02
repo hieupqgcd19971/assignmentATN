@@ -5,7 +5,7 @@
     
     RewriteEngine On
     ewriteCond %{SERVER_PORT} 80
-    RewriteRule ^(.*)$ https://www.https://hocsinhlop7.herokuapp.com/$1 [R,L]
+    RewriteRule ^(.*)$ https://www.yourdomain.com/$1 [R,L]
     
     # Handle Authorization Header
     RewriteCond %{https:Authorization} .
