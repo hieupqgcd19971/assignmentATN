@@ -68,7 +68,10 @@ class HomeController extends Controller
         FacadesSession::put('message','Cập nhật thành công');
         return Redirect::to('category');
     }
-    
+    public function getProduct(){
+        $data = DB::table('product')->where('cate','hot')->get();
+        return view('index',['product' => $data]);
+    }
     
     public function edit_product($product_id){
         
