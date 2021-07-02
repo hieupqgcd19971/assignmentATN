@@ -370,7 +370,7 @@
                                     </div>
                                 </div>
                                 <!-- Card Body -->
-                                <div class="card-body row">
+                                <!-- <div class="card-body row">
                                     <div class="chart-area col" style="position: relative;">
                                         <ul class="list_product row" style="list-style: none;height: 100%;">
                                         @foreach($product as $key => $data)
@@ -386,7 +386,7 @@
                                             @endforeach
                                         </ul>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
 

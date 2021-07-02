@@ -69,10 +69,6 @@ class HomeController extends Controller
         return Redirect::to('category');
     }
     
-    public function getProduct(){
-        $product = DB::table('product')->where('cate','hot')->get();
-        return view('index',['product' => $product]);
-    }
     
     public function edit_product($product_id){
         
