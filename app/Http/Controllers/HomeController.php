@@ -35,7 +35,7 @@ class HomeController extends Controller
             session('user',$username);
             return Redirect::to('atnpage');
         }else{
-            return Redirect::to('login');
+            return Redirect::to('');
         }
     }
     
