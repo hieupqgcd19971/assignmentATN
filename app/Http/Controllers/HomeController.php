@@ -26,7 +26,11 @@ class HomeController extends Controller
     }
     public function logout(){
         return view('login');
-    }       
+    }   
+    public function listUser(){
+        $list_user = DB::table('user')->get();
+        return view('listUser',['list_user' => $list_user]);
+    }    
     public function login_check(Request $request){
         $username = $request->username;
         $password = $request->password;
