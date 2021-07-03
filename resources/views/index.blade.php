@@ -112,7 +112,13 @@
             <div class="sidebar-heading">
                 Addons
             </div>
-
+            <?php 
+                        use Illuminate\Support\Facades\Session;
+                        $message = Session::get('message');
+                        if($message){
+                            echo '<script> alert(".'.$message.'");</script>';
+                            Session::put('message',null);
+                        } ?>
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="{{URL::to('/list_user')}}" data-toggle="collapse" data-target="#collapsePages"
