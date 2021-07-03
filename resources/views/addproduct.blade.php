@@ -275,10 +275,7 @@ include_once '../resources/views/menu.blade.php' ?>
                             <div class="add_product_inner">
                                 <form action="{{URL::to('/save_new_product')}}" method="post" role="form">
                                     {{ csrf_field() }}
-                                    <div class="input_name">
-                                        <label for=""style="padding: 10px 50px 10px 20px; width: 200px;font-weight: 500">Mã sản phẩm</label>
-                                        <input type="text" name="product_id" id="" placeholder="Mã sản phẩm">
-                                    </div>
+                                    
                                     <div class="input_name">
                                         <label for=""style="padding: 10px 50px 10px 20px; width: 200px;font-weight: 500">Tên sản phẩm</label>
                                         <input type="text" name="product_name" id="" placeholder="Tên sản phẩm">
