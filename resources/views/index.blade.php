@@ -565,14 +565,14 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="{{asset('js/jquery.min.js')}}"></script>
-    <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
+    <!-- <script src="{{asset('js/jquery.min.js')}}" type="text/javascript"></script> -->
+    <script src="{{asset('js/bootstrap.bundle.min.js')}}" type="text/javascript" ></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="{{asset('js/bootstrap.js')}}"></script>
+    <script src="{{asset('js/bootstrap.js')}}" type="text/javascript"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="{{asset('js/sb-admin-2.min.js')}}"></script>
+    <script src="{{asset('js/sb-admin-2.min.js')}}" type="text/javascript"></script>
 
 </body>
 
