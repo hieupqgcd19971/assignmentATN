@@ -505,7 +505,7 @@
                                     <div class="chart-area col">
                                         <ul class="list_product row" style="list-style: none;height: 100%;">
                                         @foreach($product as $key => $data)
-                                            <li class="product_item col-xl-3 col-md-3 mb-4" style="background-color: #ffffff;margin: 10px 20px;position: relative;border: 2px solid #f6f6f6;box-shadow: 1px 2px #f6f6f6;">
+                                            <li class="product_item col-xl-3 col-md-3 mb-4" style="background-color: #ffffff;margin: 10px 20px;position: relative;border: 2px solid #646161;box-shadow: 1px 2px #f6f6f6;">
                                             <div style="width: 100%;">
                                     
                                                 <span><img src="{{ asset('image/'.$data->image) }}" style=" width: 230px ;height: 232px;margin-left: 20px;" alt=""></span>
