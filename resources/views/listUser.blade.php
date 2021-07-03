@@ -417,6 +417,7 @@
                                             <th>ID Người dùng</th>
                                             <th>Tên người dùng</th>
                                             <th>Mật khẩu người dùng</th>
+                                            <th>Thông tin Shop</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -426,6 +427,7 @@
                                             <td>{{$data->id}}</td>
                                             <td>{{$data->username}}</td>
                                             <td>{{$data->password}}</td>
+                                            <td>{{$data->shop}}</td>
                                         </tr>
                                         @endforeach
                                     </tbody>
