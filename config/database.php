@@ -71,7 +71,7 @@ return [
             'database' => env('DB_DATABASE', 'dbad8nrea83kml'),
             'username' => env('DB_USERNAME', 'yjgremoipjccbk'),
             'password' => env('DB_PASSWORD', '224dd681d4e57f846d680e595973314fd795f6295746f38342f0b0a218ed14f4'),
-            'charset' => 'utf8',
+            'charset' => 'utf8mb4',
             'prefix' => '',
             'prefix_indexes' => true,
             'schema' => 'public',
