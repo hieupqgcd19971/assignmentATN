@@ -43,23 +43,23 @@
                                             placeholder="Username">
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control-user" id="exampleLastName"
+                                        <input type="password" class="form-control form-control-user" id="exampleLastName"
                                             placeholder="Password">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <input  type="email" class="form-control form-control-user col-sm-6 mb-3 mb-sm-0" id="exampleInputEmail"
+                                    <input  type="password" class="form-control form-control-user col-sm-6 mb-3 mb-sm-0" id="exampleInputEmail"
                                         placeholder="Repeat Password">
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="password" class="form-control form-control-user"
+                                        <input type="text" class="form-control form-control-user"
                                             id="exampleInputPassword" placeholder="shop">
                                     </div>
                                 </div>
-                                <a href="login.html" class="btn btn-primary btn-user btn-block" type="submit">
-                                    Register Account
-                                </a>
+                                <button type="submit" class="btn btn-primary btn-user btn-block">
+                                            REGISTER
+                                        </button>
                                 <hr>
                                 <a href="index.html" class="btn btn-google btn-user btn-block">
                                     <i class="fab fa-google fa-fw"></i> Register with Google
