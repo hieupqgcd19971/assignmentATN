@@ -10,6 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
     <title>SB Admin 2 - Dashboard</title>
     <!-- Custom fonts for this template-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -33,17 +34,6 @@
         
         <!-- Sidebar -->
         <div>
-
-    <!-- Bootstrap core JavaScript-->
-    <script src="{{asset('js/jquery.min.js')}}"></script>
-    <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
-
-    <!-- Core plugin JavaScript-->
-    <script src="{{asset('js/bootstrap.js')}}"></script>
-
-    <!-- Custom scripts for all pages-->
-    <script src="{{asset('js/sb-admin-2.min.js')}}"></script>
-
 
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
             <!-- Sidebar - Brand -->
