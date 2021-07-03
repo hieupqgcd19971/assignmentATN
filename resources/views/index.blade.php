@@ -158,7 +158,7 @@
 
             <!-- Sidebar Message -->
             <div class="sidebar-card d-none d-lg-flex">
-            <img class="sidebar-card-illustration mb-2" src="{{asset('image/undraw_rocket.svg')}}" alt="...">
+                <img class="sidebar-card-illustration mb-2" src="{{asset('image/undraw_rocket.svg')}}" alt="...">
                 <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>
                 <a class="btn btn-success btn-sm" href="">Upgrade to Pro!</a>
             </div>
@@ -502,17 +502,21 @@
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body row">
-                                    <div class="chart-area col" style="position: relative;">
+                                    <div class="chart-area col">
                                         <ul class="list_product row" style="list-style: none;height: 100%;">
                                         @foreach($product as $key => $data)
-                                            <li class="product_item col-xl-3 col-md-6 mb-4" style="width: 280px;background-color: #f6f6f6;padding: 10px 20px;margin: 10px 20px;">
+                                            <li class="product_item col-xl-3 col-md-3 mb-4" style="background-color: #ffffff;margin: 10px 20px;position: relative;border: 2px solid #f6f6f6;box-shadow: 1px 2px #f6f6f6;">
                                             <div style="width: 100%;">
                                     
-                                                <span><img src="{{ asset('image/'.$data->image) }}" style=" max-width: 230px ;height: 232px;margin-left: 20px;" alt=""></span>
+                                                <span><img src="{{ asset('image/'.$data->image) }}" style=" width: 230px ;height: 232px;margin-left: 20px;" alt=""></span>
                                                 <div class="detail">
                                                     <span><h5 style="font-size: 20px; font-weight: 800; text-align: center;padding: 10px;">{{$data->name}}</h5></span>
                                                 </div>
-                                                <div style="text-align: center;font-size: 15px;">Price :{{$data->cost}} </div>
+                                                <div style="padding-bottom: 10px;">
+                                                <span >Price :{{$data->cost}}</span>
+                                                <i  class="far fa-heart" style="color: red;margin-left: 70px;"></i>
+                                                <span > 12 likes</span>
+                                            </div>
                                                 </div>
                                             </li>
                                             @endforeach

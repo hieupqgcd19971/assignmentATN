@@ -414,7 +414,7 @@
                             
                                     <thead>
                                         <tr>
-                                            <th>Mã sản phẩm</th>
+                                            <th style="width: 80px;">Mã sản phẩm</th>
                                             <th>Tên sản phẩm</th>
                                             <th>Hình ảnh</th>
                                             <th>Giá sản phẩm</th>
@@ -427,9 +427,9 @@
                                         @foreach($all_product as $key => $data)
                                         <tr>
                                             
-                                            <td>{{$data->id}}</td>
+                                            <td style="width: 80px;">{{$data->id}}</td>
                                             <td>{{$data->name}}</td>
-                                            <td><img src="{{ asset('image/'.$data->image) }}" style="width: 180px;height: 80px;"></img></td>
+                                            <td><img src="{{ asset('image/'.$data->image) }}" style="width: 180px;height: 148px;"></img></td>
                                             <td>{{$data->cost}}</td>
                                             <td>{{$data->cate}}</td>
                                             <td><a href="{{URL::to('/edit_product/'.$data->id)}}"><i class="far fa-edit" style="color:#ffff19;font-size: 25px;"></i></a></td>
