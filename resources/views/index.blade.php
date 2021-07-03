@@ -499,7 +499,7 @@
                                             <li class="product_item col-xl-3 col-md-6 mb-4" style="width: 280px;background-color: #f6f6f6;padding: 10px 20px;margin: 10px 20px;">
                                             <div style="width: 100%;">
                                     
-                                                <span><img src="image/'.$data->image" style=" max-width: 230px ;height: 232px;margin-left: 20px;" alt=""></span>
+                                                <span><img src="image/{{$data->image}}" style=" max-width: 230px ;height: 232px;margin-left: 20px;" alt=""></span>
                                                 <div class="detail">
                                                     <span><h5 style="font-size: 20px; font-weight: 800; text-align: center;padding: 10px;">{{$data->name}}</h5></span>
                                                 </div>
