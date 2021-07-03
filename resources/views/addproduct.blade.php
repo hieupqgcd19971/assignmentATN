@@ -457,20 +457,21 @@
                                     
                                     <div class="input_name">
                                         <label for=""style="padding: 10px 50px 10px 20px; width: 200px;font-weight: 500">Tên sản phẩm</label>
-                                        <input type="text" name="product_name" id="" placeholder="Tên sản phẩm">
+                                        <input type="text" name="product_name" id="" placeholder="Tên sản phẩm" style="padding: 10px 20px;border-radius: 10px;border: 1px solid #d1d3e2;">
                                     </div>
 
                                     <div class="input_image">
                                         <label for="" style="padding: 10px 50px 10px 20px; width: 200px;font-weight: 500">Hình ảnh</label>
-                                        <input type="file" name="product_image" id="" placeholder="Tên sản phẩm">
+                                        <input type="file" name="product_image" id="" placeholder="Tên sản phẩm"  style="padding: 10px 20px;border-radius: 10px;border: 1px solid #d1d3e2;">
                                     </div>
                                     <div class="input_price">
-                                        <label for="" style="padding: 10px 50px 10px 20px; width: 200px;font-weight: 500">Giá sản phẩm</label>
-                                        <input type="text" name="product_price" id="" placeholder="Giá sản phẩm">
+                                        <label for="" style="padding: 10px 50px 10px 20px; width: 200px;font-weight: 500" >Giá sản phẩm</label>
+                                        <input type="text" name="product_price" id="" placeholder="Giá sản phẩm"  style="padding: 10px 20px;border-radius: 10px;border: 1px solid #d1d3e2;">
                                     </div>
                 
                                     <div class="input_cate">
-                                    <select style="margin-top: 30px;padding: 20px;" class="js-select2 select2-hidden-accessible" name="product_cate" tabindex="-1" aria-hidden="true">
+                                        <label for="" style="padding: 10px 50px 10px 20px; width: 200px;font-weight: 500">Danh mục sản ơhẩm </label>
+                                    <select style="margin-top: 30px;padding: 10px;" class="js-select2 select2-hidden-accessible" name="product_cate" tabindex="-1" aria-hidden="true">
                                         <option value="hot">Sản phẩm nổi bật</option>
                                         <option value="normal">Sản phẩm kho</option>
                                         <option value="sale">Sản phẩm giảm giá</option>
