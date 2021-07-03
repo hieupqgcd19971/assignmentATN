@@ -22,7 +22,6 @@ class HomeController extends Controller
     }
 
     public function login(){
-        $this->authLogin('atnpage');
         return view('login');
 }       
     public function login_check(Request $request){
@@ -40,13 +39,12 @@ class HomeController extends Controller
     }
     
     public function all_product(){
-        $this->authLogin('category');
+
         $all_product = DB::table('product')->get();
         return view('category',['all_product' => $all_product]);
     }
 
     public function add_product(){
-        $this->authLogin('add');
         return view('addproduct');
     }
 
@@ -90,7 +88,6 @@ class HomeController extends Controller
     }
     
     public function edit_product($product_id){
-        $this->authLogin('edit_product');
         $edit_product = DB::table('product')->where('id',$product_id)->get();
         return view('edit',['edit_product' => $edit_product]);
     }
