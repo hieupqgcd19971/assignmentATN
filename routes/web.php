@@ -14,9 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/','HomeController@getProduct');
+Route::get('/','HomeController@login');
 
-Route::get('/login','HomeController@login');
+Route::get('/atnpage','HomeController@getProduct');
 Route::get('/login_check','HomeController@login_check');
 Route::get('/category','HomeController@all_product');
 
