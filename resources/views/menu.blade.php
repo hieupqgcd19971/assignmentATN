@@ -58,7 +58,7 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="{{URL::to('/category')}}" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-wrench"></i>
+                    <i class="fas fa-border-all"></i>
                     <span>Tất cả sản phẩm</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
@@ -75,7 +75,7 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="{{URL::to('/category_hot')}}" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-wrench"></i>
+                    <i class="fab fa-hotjar"></i>
                     <span>Sản phẩm nổi bật</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
@@ -92,7 +92,7 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="{{URL::to('/category_normal')}}" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-wrench"></i>
+                    <i class="fas fa-business-time"></i>
                     <span>Sản phẩm tồn kho</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
@@ -109,7 +109,7 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="{{URL::to('/category_sale')}}" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-wrench"></i>
+                    <i class="fab fa-salesforce"></i>
                     <span>Sản phẩm đang sale</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"

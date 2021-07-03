@@ -81,7 +81,7 @@ class HomeController extends Controller
     
         // get product hot
         public function hotProduct(){
-            $data = DB::table('product')->where('cate','normal')->get();
+            $data = DB::table('product')->where('cate','hot')->get();
             return view('hotProduct',['product'=>$data]);
         }
         //get product normal
