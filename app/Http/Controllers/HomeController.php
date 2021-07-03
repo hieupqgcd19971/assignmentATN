@@ -46,7 +46,7 @@ class HomeController extends Controller
         $data['cate'] = $request->product_cate;
         $data['decs'] = $request->product_decs;
         
-        if( $data['id'] == "" ||
+        if( $data['id'] == 0 ||
             $data['name'] == "" ||
             $data['image'] == "" ||
             $data['cost'] == ""||
