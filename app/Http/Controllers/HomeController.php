@@ -46,19 +46,11 @@ class HomeController extends Controller
         $data['cate'] = $request->product_cate;
         $data['decs'] = $request->product_decs;
         
-        if( $data['id'] == 0 ||
-            $data['name'] == "" ||
-            $data['image'] == "" ||
-            $data['cost'] == ""||
-            $data['cate'] == ""||
-            $data['decs'] == ""){
-                FacadesSession::put('message','Không được bỏ trống các mục');
-                return Redirect::to('addproduct');
-            }else{
+       
                 DB::table('product')->insert($data);
                 FacadesSession::put('message','Thêm sản phẩm thành công');
                 return Redirect::to('category');
-            }
+            
     }
     public function update_product(Request $request,$product_id){
         $data = array();
