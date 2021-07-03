@@ -63,7 +63,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="{{URL::to('/')}}">
+                <a class="nav-link" href="{{URL::to('/atnpage')}}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Trang Admin</span></a>
             </li>
