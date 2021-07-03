@@ -429,7 +429,7 @@
                                             
                                             <td>{{$data->id}}</td>
                                             <td>{{$data->name}}</td>
-                                            <td><img src="../resources/image/{{$data->image}}" style="width: 180px;height: 80px;"></img></td>
+                                            <td><img src="{{ asset('image/'.$data->image) }}" style="width: 180px;height: 80px;"></img></td>
                                             <td>{{$data->cost}}</td>
                                             <td>{{$data->cate}}</td>
                                             <td><a href="{{URL::to('/edit_product/'.$data->id)}}"><i class="far fa-edit" style="color:#ffff19;font-size: 25px;"></i></a></td>

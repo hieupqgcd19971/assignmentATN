@@ -111,7 +111,7 @@
 				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
 					<span class="label-input100" style="padding: 10px 20px;">Hình ảnh</span>
                     <div>
-                    <img  src="http://localhost/assignment2/resources/image/{{$data->image}}" style="width: 100px;height: 100px;border: 2px solid #18191a; padding: 10px;"></img>
+                    <img  src="{{ asset('image/'.$data->image) }}" style="width: 100px;height: 100px;border: 2px solid #18191a; padding: 10px;"></img>
                     </div>
                 </div>
 
