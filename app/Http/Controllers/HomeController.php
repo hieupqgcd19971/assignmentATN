@@ -79,11 +79,26 @@ class HomeController extends Controller
             return view('index',['product' => $data]);
         }
     
+        // get product hot
+        public function hotProduct(){
+            $data = DB::table('product')->where('cate','normal')->get();
+            return view('hotProduct',['product'=>$data]);
+        }
+        //get product normal
+        public function normalProduct(){
+            $data = DB::table('product')->where('cate','normal')->get();
+            return view('normalProduct',['product'=>$data]);
+        }//get product sale
+        public function saleProduct(){
+            $data = DB::table('product')->where('cate','sale')->get();
+            return view('saleProduct',['product'=>$data]);
+        }
+
     // return view add product
     public function add_product(){
         return view('addproduct');
     }
-    
+
     // insert product to database
     public function save_new_product(Request $request){
         $data = array();

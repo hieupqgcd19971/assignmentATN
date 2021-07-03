@@ -59,7 +59,7 @@
                 <a class="nav-link collapsed" href="{{URL::to('/category')}}" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-wrench"></i>
-                    <span>Danh mục sản phẩm</span>
+                    <span>Tất cả sản phẩm</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
@@ -72,7 +72,57 @@
                     </div>
                 </div>
             </li>
-
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="{{URL::to('/category_hot')}}" data-toggle="collapse" data-target="#collapseUtilities"
+                    aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="fas fa-fw fa-wrench"></i>
+                    <span>Sản phẩm nổi bật</span>
+                </a>
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Chi tiết:</h6>
+                        <a class="collapse-item" href="{{URL::to('/category')}}">Tất cả sản phẩm</a>
+                        <a class="collapse-item" href="{{URL::to('/category/hot')}}">Sản phẩm nổi bật</a>
+                        <a class="collapse-item" href="{{URL::to('/category/normal')}}">Sản phẩm tồn kho</a>
+                        <a class="collapse-item" href="{{URL::to('/category/sale')}}">Sản phẩm giảm giá</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="{{URL::to('/category_normal')}}" data-toggle="collapse" data-target="#collapseUtilities"
+                    aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="fas fa-fw fa-wrench"></i>
+                    <span>Sản phẩm tồn kho</span>
+                </a>
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Chi tiết:</h6>
+                        <a class="collapse-item" href="{{URL::to('/category')}}">Tất cả sản phẩm</a>
+                        <a class="collapse-item" href="{{URL::to('/category/hot')}}">Sản phẩm nổi bật</a>
+                        <a class="collapse-item" href="{{URL::to('/category/normal')}}">Sản phẩm tồn kho</a>
+                        <a class="collapse-item" href="{{URL::to('/category/sale')}}">Sản phẩm giảm giá</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="{{URL::to('/category_sale')}}" data-toggle="collapse" data-target="#collapseUtilities"
+                    aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="fas fa-fw fa-wrench"></i>
+                    <span>Sản phẩm đang sale</span>
+                </a>
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Chi tiết:</h6>
+                        <a class="collapse-item" href="{{URL::to('/category')}}">Tất cả sản phẩm</a>
+                        <a class="collapse-item" href="{{URL::to('/category/hot')}}">Sản phẩm nổi bật</a>
+                        <a class="collapse-item" href="{{URL::to('/category/normal')}}">Sản phẩm tồn kho</a>
+                        <a class="collapse-item" href="{{URL::to('/category/sale')}}">Sản phẩm giảm giá</a>
+                    </div>
+                </div>
+            </li>
             <!-- Divider -->
             <hr class="sidebar-divider">
 
@@ -126,7 +176,7 @@
 
             <!-- Sidebar Message -->
             <div class="sidebar-card d-none d-lg-flex">
-                <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="...">
+            <img class="sidebar-card-illustration mb-2" src="{{asset('image/undraw_rocket.svg')}}" alt="...">
                 <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>
                 <a class="btn btn-success btn-sm" href="">Upgrade to Pro!</a>
             </div>

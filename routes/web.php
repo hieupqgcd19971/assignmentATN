@@ -24,6 +24,10 @@ Route::get('/register','HomeController@register');
 Route::get('/atnpage','HomeController@getProduct');
 Route::get('/category','HomeController@all_product');
 Route::get('/edit_product/{product_id}','HomeController@edit_product');
+Route::get('/category_hot','HomeController@hotProduct');
+Route::get('/category_normal','HomeController@normalProduct');
+Route::get('/category_sale','HomeController@saleProduct');
+
 
 // get user
 Route::get('/list_user','HomeController@listUser');
