@@ -22,7 +22,7 @@ class HomeController extends Controller
         if($result){
             FacadesSession::put('message','Đăng nhập thành công');
             session('username',$username);
-            return Redirect::to('');
+            return Redirect::to('index');
         }else{
             return Redirect::to('login');
         }
