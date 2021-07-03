@@ -25,7 +25,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="http://localhost/assignment2/public/">
+                <a class="nav-link" href="{{URL::to('/')}}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Trang Admin</span></a>
             </li>
@@ -65,10 +65,10 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Chi tiết:</h6>
-                        <a class="collapse-item" href="http://localhost/assignment2/public/category">Tất cả sản phẩm</a>
-                        <a class="collapse-item" href="utilities-color.html">Sản phẩm nổi bật</a>
-                        <a class="collapse-item" href="utilities-border.html">Sản phẩm tồn kho</a>
-                        <a class="collapse-item" href="utilities-animation.html">Sản phẩm giảm giá</a>
+                        <a class="collapse-item" href="{{URL::to('/category')}}">Tất cả sản phẩm</a>
+                        <a class="collapse-item" href="{{URL::to('/category/hot')}}">Sản phẩm nổi bật</a>
+                        <a class="collapse-item" href="{{URL::to('/category/normal')}}">Sản phẩm tồn kho</a>
+                        <a class="collapse-item" href="{{URL::to('/category/sale')}}">Sản phẩm giảm giá</a>
                     </div>
                 </div>
             </li>
@@ -90,7 +90,7 @@
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="http://localhost/assignment2/public/login">Đăng nhập</a>
+                        <a class="collapse-item" href="{{URL::to('/login')}}">Đăng nhập</a>
                         <a class="collapse-item" href="register.html">Đăng ký</a>
                         <a class="collapse-item" href="forgot-password.html">Quên mật khẩus</a>
                         <div class="collapse-divider"></div>
@@ -103,7 +103,7 @@
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="http://localhost/assignment2/public/add">
+                <a class="nav-link" href="{{URL::to('/add')}}">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Thêm sản phẩm</span></a>
             </li>
@@ -127,7 +127,7 @@
             <div class="sidebar-card d-none d-lg-flex">
                 <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="...">
                 <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>
-                <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to Pro!</a>
+                <a class="btn btn-success btn-sm" href="">Upgrade to Pro!</a>
             </div>
             <div style="padding-bottom: 400px;"></div>
         </ul>

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <link rel="stylesheet" href="{{asset('css/all.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <script src="https://cdn.ckeditor.com/ckeditor5/28.0.0/inline/ckeditor.js"></script>
@@ -134,7 +135,7 @@
 				<div class="wrap-input100 validate-input bg0 rs1-alert-validate" data-validate="Please Type Your Message">
 					<span class="label-input100">Miêu tả sản phẩm</span>
                     <div id="editor" style="padding-bottom: 100px;">
-					<textarea id="editor1" class="input100" name="product_decs" placeholder="Miêu tả sản phẩm....">{{$data->name}}</textarea>
+					<textarea id="editor1" class="input100" name="product_decs" placeholder="Miêu tả sản phẩm....">{{$data->decs}}</textarea>
                     </div>
                     <script>
                         InlineEditor
