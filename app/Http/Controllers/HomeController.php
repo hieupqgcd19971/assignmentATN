@@ -24,6 +24,18 @@ class HomeController extends Controller
     public function login(){
         return view('login');
     }
+    public function register(){
+        return view('register');
+    }
+    public function register_execute(Request $request){
+        $data = array();
+        
+        $data['name'] = $request->username;
+        $data['image'] = $request->password;
+        $data['cost'] = $request->password_again;
+        $data['cate'] = $request->shop;
+        $register = DB::table('user')->insert($data);
+    }
     public function logout(){
         return view('login');
     }   
@@ -71,7 +83,7 @@ class HomeController extends Controller
             $data['cate'] == ""||
             $data['decs'] == ""){
                 FacadesSession::put('message','Không được bỏ trống các mục');
-                return Redirect::to('addproduct');
+                return Redirect::to('add');
             }else{
                 DB::table('product')->insert($data);
                 FacadesSession::put('message','Thêm sản phẩm thành công');

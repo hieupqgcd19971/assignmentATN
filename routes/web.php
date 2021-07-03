@@ -28,3 +28,4 @@ Route::post('/update_product/{product_id}','HomeController@update_product');
 Route::get('/delete_product/{product_id}','HomeController@delete_product');
 Route::get('/logout','HomeController@logout');
 Route::get('/list_user','HomeController@listUser');
+Route::get('/register','HomeController@register');

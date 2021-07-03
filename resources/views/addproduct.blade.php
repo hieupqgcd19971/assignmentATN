@@ -164,7 +164,7 @@
 
         <!-- Sidebar Message -->
         <div class="sidebar-card d-none d-lg-flex">
-            <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="...">
+            <img class="sidebar-card-illustration mb-2" src="{{asset('image/undraw_rocket.svg'')}}" alt="...">
             <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>
             <a class="btn btn-success btn-sm" href="">Upgrade to Pro!</a>
         </div>
@@ -399,7 +399,14 @@
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary">Thêm sản phẩm</h6>
                         </div>
-
+                        <?php 
+                        use Illuminate\Support\Facades\Session;
+                        $message = Session::get('message');
+                        if($message){
+                            echo '<script> alert(".'.$message.'");</script>';
+                            Session::put('message',null);
+                        } ?>
+                       
                         <div class="add_product_wrapper">
                             <div class="add_product_inner">
                                 <form action="{{URL::to('/save_new_product')}}" method="post" role="form">
