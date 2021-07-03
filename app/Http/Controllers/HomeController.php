@@ -13,15 +13,20 @@ use Symfony\Component\HttpFoundation\Session\Session;
 class HomeController extends Controller
 {
     public function login(){
+        if(session()->has('user')){
+            return Redirect::to('atnpage');
+        }else{
         return view('login');
-    }       
+    }
+}       
     public function login_check(Request $request){
         $username = $request->username;
         $password = $request->password;
         $result = DB::table('user')->where('username',$username)->where('password',$password)->first();
         if($result){
             FacadesSession::put('message','Đăng nhập thành công');
-            session('username',$username);
+            FacadesSession::put('username',$username);
+            $request->session()->put('user',$username);
             return Redirect::to('atnpage');
         }else{
             return Redirect::to('login');
