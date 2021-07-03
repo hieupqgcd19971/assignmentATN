@@ -33,9 +33,14 @@ class HomeController extends Controller
         $data['username'] = $request->username;
         $data['password'] = $request->password;
         $data['shop'] = $request->shop;
+         if($request->password == $request->password_again){
             DB::table('user')->insert($data);
             FacadesSession::put('message','Đăng ký thành công');
             return Redirect::to('atnpage');
+        }else{
+            FacadesSession::put('message','Mật khẩu không trùng khớp');
+            return Redirect::to('register');
+            }
         }else{
             FacadesSession::put('message','Không được bỏ trống ');
             return Redirect::to('register');

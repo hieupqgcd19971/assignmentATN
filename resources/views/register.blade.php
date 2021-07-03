@@ -43,7 +43,7 @@
                                             placeholder="Username">
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="password"  name="Password" class="form-control form-control-user" id="exampleLastName"
+                                        <input type="password"  name="password" class="form-control form-control-user" id="exampleLastName"
                                             placeholder="Password">
                                     </div>
                                 </div>
