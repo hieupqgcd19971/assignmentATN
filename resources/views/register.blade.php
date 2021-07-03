@@ -39,21 +39,21 @@
                             <form class="user" action="{{URL::to('register_execute')}}">
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user" id="exampleFirstName"
+                                        <input name="username"  type="text" class="form-control form-control-user" id="exampleFirstName"
                                             placeholder="Username">
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="password" class="form-control form-control-user" id="exampleLastName"
+                                        <input type="password"  name="password" class="form-control form-control-user" id="exampleLastName"
                                             placeholder="Password">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <input  type="password" class="form-control form-control-user col-sm-6 mb-3 mb-sm-0" id="exampleInputEmail"
+                                    <input  type="password"  name="password_again" class="form-control form-control-user col-sm-6 mb-3 mb-sm-0" id="exampleInputEmail"
                                         placeholder="Repeat Password">
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user"
+                                        <input type="text" name="shop" class="form-control form-control-user"
                                             id="exampleInputPassword" placeholder="shop">
                                     </div>
                                 </div>

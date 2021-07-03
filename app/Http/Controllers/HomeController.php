@@ -29,12 +29,22 @@ class HomeController extends Controller
     }
     public function register_execute(Request $request){
         $data = array();
-        
-        $data['name'] = $request->username;
-        $data['image'] = $request->password;
-        $data['cost'] = $request->password_again;
-        $data['cate'] = $request->shop;
-        $register = DB::table('user')->insert($data);
+        if($request->username == "" || $request->password == "" || $request->again == "" || $request->shop == ""){
+        $data['username'] = $request->username;
+        $data['password'] = $request->password;
+        $data['shop'] = $request->shop;
+        if($request->password == $request->password_again){
+            $register = DB::table('user')->insert($data);
+            FacadesSession::put('message','Đăng ký thành công');
+            return Redirect::to('index');
+        }else{
+            FacadesSession::put('message','Mật khẩu không trùng khớp');
+            return Redirect::to('register');
+            }
+        }else{
+            FacadesSession::put('message','Không được bỏ trống ');
+            return Redirect::to('register');
+        }
     }
     public function logout(){
         return view('login');
