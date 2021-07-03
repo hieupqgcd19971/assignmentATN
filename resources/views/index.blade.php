@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -113,7 +114,7 @@
                 Addons
             </div>
             <?php 
-                        use Illuminate\Support\Facades\Session;
+                     use Illuminate\Support\Facades\Session;
                         $message = Session::get('message');
                         if($message){
                             echo '<script> alert(".'.$message.'");</script>';

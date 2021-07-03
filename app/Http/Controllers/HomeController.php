@@ -12,21 +12,34 @@ use Symfony\Component\HttpFoundation\Session\Session;
 
 class HomeController extends Controller
 {   
-    public function authLogin(string $test){
-        $user = FacadesSession::get('user');
-        if($user){
+    // check session login and return view login
+    public function login(Request $request){
+        if($request->session()->get('user') != ""){
             Redirect::to('atnpage');
+        }
+            return view('login');
+    }
+
+    // check login with database
+    public function login_check(Request $request){
+        $username = $request->username;
+        $password = $request->password;
+        $result = DB::table('user')->where('username',$username)->where('password',$password)->first();
+        if($result){
+            FacadesSession::put('message','Đăng nhập thành công');
+            FacadesSession::put('user',$username);
+            $request->session()->put('user',$username);
+            return Redirect::to('atnpage');
         }else{
-            Redirect::to($test);
+            return Redirect::to('');
         }
     }
 
-    public function login(){
-        return view('login');
-    }
+    // return view register
     public function register(){
         return view('register');
     }
+    // check register with database
     public function register_execute(Request $request){
         $data = array();
         if($request->username != "" || $request->password != "" || $request->password_again != "" || $request->shop != ""){
@@ -35,43 +48,43 @@ class HomeController extends Controller
         $data['shop'] = $request->shop;
             DB::table('user')->insert($data);
             FacadesSession::put('message','Đăng ký thành công');
+            FacadesSession::put('user',$request->username);
             return Redirect::to('atnpage');
         }else{
             FacadesSession::put('message','Không được bỏ trống ');
             return Redirect::to('register');
         }
     }
+    // logout
     public function logout(){
         return view('login');
     }   
+    
+    //get listuser
     public function listUser(){
         $list_user = DB::table('user')->get();
         return view('listUser',['list_user' => $list_user]);
     }    
-    public function login_check(Request $request){
-        $username = $request->username;
-        $password = $request->password;
-        $result = DB::table('user')->where('username',$username)->where('password',$password)->first();
-        if($result){
-            FacadesSession::put('message','Đăng nhập thành công');
-            FacadesSession::put('user',$username);
-            session('user',$username);
-            return Redirect::to('atnpage');
-        }else{
-            return Redirect::to('');
-        }
-    }
     
-    public function all_product(){
 
+    // get all product from database
+    public function all_product(){
         $all_product = DB::table('product')->get();
         return view('category',['all_product' => $all_product]);
     }
 
+        // getProduct hot in order to show index
+        public function getProduct(){
+            $data = DB::table("product")->where('cate','hot')->get();
+            return view('index',['product' => $data]);
+        }
+    
+    // return view add product
     public function add_product(){
         return view('addproduct');
     }
-
+    
+    // insert product to database
     public function save_new_product(Request $request){
         $data = array();
         
@@ -95,6 +108,14 @@ class HomeController extends Controller
                 return Redirect::to('category');
             }
     }
+
+    // return view edit 
+    public function edit_product($product_id){
+        $edit_product = DB::table('product')->where('id',$product_id)->get();
+        return view('edit',['edit_product' => $edit_product]);
+    }
+
+    // edit information of product
     public function update_product(Request $request,$product_id){
         
         $data = array();
@@ -106,15 +127,9 @@ class HomeController extends Controller
         FacadesSession::put('message','Cập nhật thành công');
         return Redirect::to('category');
     }
-    public function getProduct(){
-        $data = DB::table("product")->where('cate','hot')->get();
-        return view('index',['product' => $data]);
-    }
-    
-    public function edit_product($product_id){
-        $edit_product = DB::table('product')->where('id',$product_id)->get();
-        return view('edit',['edit_product' => $edit_product]);
-    }
+
+    // DELETE
+    // delete product
     public function delete_product($product_id){
         DB::table('product')->where('id',$product_id)->delete();
         FacadesSession::put('message',"Đã xóa sản phẩm");
