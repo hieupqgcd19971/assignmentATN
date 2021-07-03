@@ -11,13 +11,19 @@ use Illuminate\Support\Facades\Session as FacadesSession;
 use Symfony\Component\HttpFoundation\Session\Session;
 
 class HomeController extends Controller
-{
-    public function login(){
-        if(session()->has('user')){
-            return Redirect::to('atnpage');
+{   
+    public function authLogin(string $test){
+        $user = FacadesSession::get('user');
+        if($user){
+            Redirect::to('atnpage');
         }else{
-        return view('login');
+            Redirect::to($test);
+        }
     }
+
+    public function login(){
+        $this->authLogin('atnpage');
+        return view('login');
 }       
     public function login_check(Request $request){
         $username = $request->username;
@@ -25,8 +31,8 @@ class HomeController extends Controller
         $result = DB::table('user')->where('username',$username)->where('password',$password)->first();
         if($result){
             FacadesSession::put('message','Đăng nhập thành công');
-            FacadesSession::put('username',$username);
-            $request->session()->put('user',$username);
+            FacadesSession::put('user',$username);
+            session('user',$username);
             return Redirect::to('atnpage');
         }else{
             return Redirect::to('login');
@@ -34,11 +40,13 @@ class HomeController extends Controller
     }
     
     public function all_product(){
+        $this->authLogin('category');
         $all_product = DB::table('product')->get();
         return view('category',['all_product' => $all_product]);
     }
 
     public function add_product(){
+        $this->authLogin('add');
         return view('addproduct');
     }
 
@@ -66,6 +74,7 @@ class HomeController extends Controller
             }
     }
     public function update_product(Request $request,$product_id){
+        
         $data = array();
         $data['name'] = $request->product_name;
         $data['cost'] = $request->product_price;
@@ -81,7 +90,7 @@ class HomeController extends Controller
     }
     
     public function edit_product($product_id){
-        
+        $this->authLogin('edit_product');
         $edit_product = DB::table('product')->where('id',$product_id)->get();
         return view('edit',['edit_product' => $edit_product]);
     }
